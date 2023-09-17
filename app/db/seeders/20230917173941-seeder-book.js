@@ -3,7 +3,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      'Products',
+      'Books',
       [
         {
           title: 'David Bach: Faktor Latte',
@@ -12,7 +12,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -24,7 +24,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -36,7 +36,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -48,7 +48,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -60,7 +60,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -72,7 +72,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -84,7 +84,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -96,7 +96,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -108,7 +108,7 @@ module.exports = {
           published: new Date(),
           price: 90,
           stock: 100,
-          user: 6,
+          user: 1,
           category: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -119,6 +119,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('People', null, {});
+    await queryInterface.bulkDelete('Books', null, {});
   },
 };
