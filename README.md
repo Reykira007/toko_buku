@@ -49,12 +49,4 @@ Anda dapat menemukan dokumentasi API lengkap di [Postman](link-ke-dokumentasi-po
 
 ### Lisensi
 
-Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE). Ini berarti:
-
-- Anda diberikan hak untuk menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan, mendistribusikan, sublicensikan, dan/atau menjual salinan perangkat lunak ini, serta untuk mengizinkan orang lain yang melakukannya, asalkan tindakan tersebut dilakukan sesuai dengan ketentuan Lisensi MIT.
-
-- Anda harus mencantumkan pemberitahuan hak cipta di semua salinan atau bagian yang signifikan dari perangkat lunak ini.
-
-- Perangkat lunak ini disediakan "apa adanya," tanpa jaminan apa pun, baik tersurat maupun tersirat, termasuk namun tidak terbatas pada jaminan kepatutan untuk tujuan tertentu dan non-pelanggaran. Penulis atau pemegang hak cipta tidak bertanggung jawab atas klaim, kerusakan, atau kewajiban hukum lainnya yang timbul akibat dari atau sehubungan dengan perangkat lunak tersebut.
-
-Lisensi MIT memberikan fleksibilitas kepada pengguna proyek Anda untuk menggunakan dan mengadaptasi kode sumbernya dengan sedikit pembatasan, asalkan mereka mencantumkan pemberitahuan hak cipta Anda. Ini adalah pilihan yang umum untuk proyek open source yang ingin membagikan dan mengizinkan penggunaan kode sumber mereka dengan bebas.
+Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE).
