@@ -15,10 +15,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res)=>{
-    res.json({messege: 'Welcome to api toko buku'})
+app.get('/', (req, res) => {
+  res.json({ messege: 'Welcome to api toko buku' });
 });
 app.use(`${URL}`, authRouter);
-app.use(`${categoriesRouter}`, authRouter);
+app.use(`${URL}`, categoriesRouter);
 
 module.exports = app;
