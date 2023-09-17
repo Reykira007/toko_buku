@@ -1,6 +1,6 @@
 # Toko Buku - Proyek Toko Buku Online
 
-Proyek ini adalah aplikasi toko buku online yang dibangun menggunakan JavaScript, Node.js, MySQL dengan Sequelize sebagai ORM, dan Express.js. Aplikasi ini juga mengimplementasikan otentikasi berbasis JWT dan mencoba mengikuti prinsip clean code.
+Proyek latihan backend untuk pengembangan aplikasi toko buku online dengan JavaScript, Node.js, MySQL (Sequelize ORM), dan Express.js. Mengimplementasikan otentikasi berbasis JWT dan prinsip clean code.
 
 ## Fitur Utama
 
