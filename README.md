@@ -2,6 +2,10 @@
 
 Proyek latihan backend untuk pengembangan aplikasi toko buku online dengan JavaScript, Node.js, MySQL (Sequelize ORM), dan Express.js. Mengimplementasikan otentikasi berbasis JWT dan prinsip clean code.
 
+## SOAL
+[Soal Latihan Backend.pdf](https://github.com/Reykira007/toko_buku/files/12652021/Soal.Latihan.Backend.pdf)
+
+
 ## Fitur Utama
 
 1. **Manajemen Kategori**
