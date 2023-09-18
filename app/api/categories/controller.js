@@ -17,7 +17,7 @@ module.exports = {
     }
   },
 
-  creaateCategories: async (req, res, next) => {
+  createCategories: async (req, res, next) => {
     try {
       const { name } = req.body;
       const categories = await Category.create({
