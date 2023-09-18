@@ -34,4 +34,32 @@ module.exports = {
       next(err);
     }
   },
+
+  signup: async (req, res, next) => {
+    try {
+      const { name, email, password, confirmPassword } = req.body;
+
+      if (password !== confirmPassword) {
+        res
+          .status(403)
+          .json({ messege: "Password and confirm password don't match" });
+      }
+      const checkEmail = await User.findOne({ where: { email: email } });
+      if (checkEmail) {
+        return res.status(403).json({ messege: 'Email registered' });
+      }
+
+      const user = await User.create({
+        name,
+        email,
+        password: bycrypt.hashSync(password, 10),
+        role: 'admin',
+      });
+      // console.log(user);
+      delete user.dataValues.password;
+      res.status(201).json({ messege: 'Success Signup', data: user });
+    } catch (err) {
+      next(err);
+    }
+  },
 };
