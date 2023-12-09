@@ -13,8 +13,8 @@ const uploadImage = async (req, res, next) => {
       data: { src: `/uploads/${req.file.filename}` },
     });
   } catch (error) {
-    console.error(error); // Log the error for debugging
-    next(error);
+    console.error(error);
+    next(error); // Make sure to forward the error to the error-handling middleware
   }
 };
 

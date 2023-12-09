@@ -5,7 +5,10 @@ const storage = multer.diskStorage({
     cb(null, 'public/uploads/');
   },
   filename: function (req, file, cb) {
-    cb(null, new Date().toISOString() + '_' + file.originalname);
+    cb(
+      null,
+      new Date().toISOString().replace(/:/g, '-') + '_' + file.originalname
+    );
   },
 });
 
@@ -14,7 +17,12 @@ const fileFilter = (req, file, cb) => {
     cb(null, true);
   } else {
     // Reject file
-    cb({ message: 'Unsupported file format' }, false);
+    cb(
+      new Error(
+        'Format file tidak valid. Mohon gunakan formaat JPEG, JPG, atau PNG'
+      ),
+      false
+    );
   }
 };
 
