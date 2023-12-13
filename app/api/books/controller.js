@@ -6,7 +6,6 @@ module.exports = {
   getAllBooks: async (req, res, next) => {
     try {
       const { keyword = '' } = req.query;
-      console.log(keyword);
 
       let condition = {
         user: req.user.id,
@@ -32,19 +31,39 @@ module.exports = {
     }
   },
 
-  // createBooks: async (req, res, next) => {
-  //   try {
-  //     const { name } = req.body;
-  //     const book = await Book.create({
-  //       name: name,
-  //       user: req.user.id,
-  //     });
+  createBooks: async (req, res, next) => {
+    try {
+      let user = req.user.id;
+      const { title, price, category, author, published, stock, image } =
+        req.body;
 
-  //     res.status(201).json({ messege: 'Success create books', data: book });
-  //   } catch (err) {
-  //     next(err);
-  //   }
-  // },
+      const checkCategory = await Category.findOne({
+        where: {
+          id: category,
+          user: user,
+        },
+      });
+
+      if (!checkCategory) {
+        return res.status(404).json({ messege: 'id category not found' });
+      }
+
+      const books = await Book.create({
+        title,
+        price,
+        category,
+        author,
+        published,
+        stock,
+        image,
+        user: user,
+      });
+
+      res.status(201).json({ messege: 'Success create books', data: books });
+    } catch (err) {
+      next(err);
+    }
+  },
 
   // updateBooks: async (req, res, next) => {
   //   try {
