@@ -102,20 +102,28 @@ module.exports = {
         user: user,
       });
 
-      res.status(201).json({ messege: 'Success update books', data: books });
+      res.status(200).json({ messege: 'Success update books', data: books });
     } catch (err) {
       next(err);
     }
   },
 
-  // deleteBooks: (req, res, next) => {
-  //   Book.findOne({ where: { id: req.params.id, user: req.user.id } })
-  //     .then(book => {
-  //       if (book) {
-  //         book.destroy();
-  //         res.status(200).json({ messege: 'Success delete books', data: book });
-  //       }
-  //     })
-  //     .catch(err => next(err));
-  // },
+  deleteBooks: async (req, res, next) => {
+    try {
+      const books = await Book.findOne({ where: { id: req.params.id } });
+
+      if (!books) {
+        return res.status(404).json({ message: 'id book not found' });
+      }
+
+      books.destroy();
+
+      res.status(201).json({
+        message: 'Success delete books',
+        data: books,
+      });
+    } catch (err) {
+      next(err);
+    }
+  },
 };
