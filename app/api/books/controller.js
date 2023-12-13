@@ -65,20 +65,48 @@ module.exports = {
     }
   },
 
-  // updateBooks: async (req, res, next) => {
-  //   try {
-  //     const { id } = req.params;
-  //     const { name } = req.body;
-  //     const checkBook = await Book.findOne({
-  //       where: { id: id, user: req.user.id },
-  //     });
+  updateBooks: async (req, res, next) => {
+    try {
+      let user = req.user.id;
+      const { id } = req.params;
+      const { title, price, category, author, published, stock, image } =
+        req.body;
 
-  //     const book = await checkBook.update({ name: name });
-  //     res.status(201).json({ messege: 'Success update books', data: book });
-  //   } catch (err) {
-  //     next(err);
-  //   }
-  // },
+      const checkCategory = await Category.findOne({
+        where: {
+          id: category,
+          user: user,
+        },
+      });
+
+      if (!checkCategory) {
+        return res.status(404).json({ messege: 'id category not found' });
+      }
+
+      const checkBooks = await Book.findOne({
+        where: { id: id },
+      });
+
+      if (!checkBooks) {
+        return res.status(404).json({ message: 'id book not found' });
+      }
+
+      const books = await checkBooks.update({
+        title,
+        price,
+        category,
+        author,
+        published,
+        stock,
+        image,
+        user: user,
+      });
+
+      res.status(201).json({ messege: 'Success update books', data: books });
+    } catch (err) {
+      next(err);
+    }
+  },
 
   // deleteBooks: (req, res, next) => {
   //   Book.findOne({ where: { id: req.params.id, user: req.user.id } })
