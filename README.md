@@ -49,7 +49,7 @@ Proyek latihan backend untuk pengembangan aplikasi toko buku online dengan JavaS
 
 ## Dokumentasi API
 
-Anda dapat menemukan dokumentasi API lengkap di [Postman](link-ke-dokumentasi-postman).
+Anda dapat menemukan dokumentasi API lengkap di [Postman](https://www.postman.com/orbital-module-administrator-22621327/workspace/toko-buku-api/collection/23856840-e5c5cb44-7d59-4047-ae80-13fc4a0d0d51?action=share&creator=23856840).
 
 ### Lisensi
 
