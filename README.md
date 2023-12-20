@@ -36,7 +36,6 @@ Proyek latihan backend untuk pengembangan aplikasi toko buku online dengan JavaS
 - Web Framework: Express.js
 - Prinsip Clean Code
 - Dokumentasi API: Postman
-- Deployment: Heroku
 
 ## Cara Menjalankan Proyek
 
